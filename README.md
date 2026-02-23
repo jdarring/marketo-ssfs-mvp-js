@@ -1,4 +1,4 @@
-# Marketo Calculate Formula Service
+# Marketo Calculate Formula - Self-Service Flow Step
 
 A high-performance Node.js backend for Marketo Self-Service Flow Steps (SSFS). This service allows users to perform Excel-like calculations (IF, SUM, AVERAGE, etc.) on lead data during smart campaigns.
 
