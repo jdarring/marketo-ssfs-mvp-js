@@ -1,0 +1,12 @@
+{
+  "name": "marketo-calculate-formula-ssfs",
+  "version": "1.0.0",
+  "description": "Marketo Self-Service Flow Step for Excel-like calculations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "hot-formula-parser": "^4.0.0"
+  }
+}

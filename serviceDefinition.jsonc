@@ -1,0 +1,111 @@
+{
+  "apiName": "ssfs-Formula-NodeJS",
+  "provider": "Flowsteps.io",
+  "i18n": {
+    "en_US": {
+      "name": "Calculate Formula NJS",
+      "filterName": "Formula was calculated - NJS",
+      "triggerName": "Formula is calculated - NJS",
+      "description": "Calculate a given formula with the formula.js engine and returns the response."
+    }
+  },
+  "supportPage": "https://www.example.com/support.html",
+  "supportEmail": "support@kapturall.com",
+  "invocationEndpoint": "https://actions.kapturall.com/ssfs/formula/execute",
+  "statusEndpoint": "https://actions.kapturall.com/ssfs/formula/status",
+  "brandIcon": true,
+  "serviceIcon": true,
+  "authSetting": {
+    "authType": "apiKey",
+    "headerName": "x-api-key"
+  },
+  "primaryAttribute": "formula",
+  "invocationPayloadDef": {
+    "globalAttributes": [],
+    "flowAttributes": [
+      {
+        "apiName": "formula",
+        "description": "Formula to calculate",
+        "uiTooltip": "Formula",
+        "i18n": {
+          "en_US": {
+            "name": "Formula",
+            "description": "Formula to calculate",
+            "uiTooltip": "Formula to calculate"
+          }
+        },
+        "dataType": "text",
+        "hasPicklist": false,
+        "enforcePicklistSelect": false
+      },
+      {
+        "apiName": "returnField",
+        "description": "Field to return fomula response. Field must be set up in mapping. Default is formulaResponse",
+        "uiTooltip": "Field to return fomula response. Field must be set up in mapping. Default is formulaResponse",
+        "i18n": {
+          "en_US": {
+            "name": "Return Field",
+            "description": "Field to return fomula response. Field must be set up in mapping. Default is formulaResponse",
+            "uiTooltip": "Field to return fomula response. Field must be set up in mapping. Default is formulaResponse"
+          }
+        },
+        "dataType": "string",
+        "hasPicklist": true,
+        "enforcePicklistSelect": true
+      },
+      {
+        "apiName": "format",
+        "description": "Select how the formula response should be formatted. Default is Text",
+        "uiTooltip": "Select how the formula response should be formatted. Default is Text",
+        "i18n": {
+          "en_US": {
+            "name": "Return Format",
+            "description": "Select how the formula response should be formatted. Default is Text",
+            "uiTooltip": "Select how the formula response should be formatted. Default is Text"
+          }
+        },
+        "dataType": "string",
+        "hasPicklist": true,
+        "enforcePicklistSelect": true
+      }
+    ],
+    "fields": [],
+    "userDrivenMapping": false,
+    "leadContext": true,
+    "programContext": true,
+    "campaignContext": true,
+    "triggerContext": true,
+    "programMemberContext": true,
+    "subscriptionContext": true,
+    "myTokenContext": []
+  },
+  "callbackPayloadDef": {
+    "attributes": [
+      {
+        "apiName": "returnVal",
+        "i18n": {
+          "en_US": {
+            "name": "Formula Result",
+            "description": "The value returned by the service",
+            "uiTooltip": "The value returned by the service"
+          }
+        },
+        "dataType": "text"
+      },
+      {
+        "apiName": "computedFormula",
+        "i18n": {
+          "en_US": {
+            "name": "Calculated Formula",
+            "description": "The formula which was calculated",
+            "uiTooltip": "The formula which was calculated"
+          }
+        },
+        "dataType": "string"
+      }
+    ],
+    "userDrivenMapping": true
+  },
+  "cabundle": null,
+  "providerInstruction": true
+}
