@@ -68,7 +68,7 @@ async function sendCallback(callbackUrl, headers, payload) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-callback-token': sanitizeHeader(headers['x-callback-token'] || headers['token']),
+            'x-callback-token': sanitizeHeader(payload.token || headers['x-callback-token']),
             'x-api-key': sanitizeHeader(headers['x-api-key'])
         }
     };
