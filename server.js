@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { Parser } = require('hot-formula-parser');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 // Retrieve the API Key from environment variables
 const API_KEY = process.env.API_KEY;
 
@@ -202,4 +202,4 @@ const server = http.createServer((req, res) => {
     res.end();
 });
 
-server.listen(PORT, () => console.log(`Service active on port ${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`Service active on port ${PORT}`));
